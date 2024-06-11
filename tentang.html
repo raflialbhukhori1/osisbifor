@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang OSIS SMK Bina Informatika</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS khusus untuk tentang.html */
+        .faq-container {
+            margin: 70px 10px 20px 10px;
+            padding: 10px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid var(--text-color);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .faq-question {
+            padding: 15px;
+            background-color: var(--navbar-bg);
+            color: var(--text-color);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: var(--highlight-color);
+        }
+
+        .faq-answer {
+            padding: 15px;
+            background-color: var(--modal-bg);
+            color: var(--text-color);
+            display: none;
+            border-top: 1px solid var(--text-color);
+        }
+    </style>
+</head>
+<body class="day-mode">
+    <nav class="navbar">
+        <img src="logo-osis.png" alt="Logo OSIS" class="logo">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="beranda.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="anggota.html">Anggota</a></li>
+            <li><a href="sejarah.html">Sejarah</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle">🌙</button>
+        <button class="hamburger" id="hamburger">&#9776;</button>
+    </nav>
+    <main>
+        <section class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">Apa itu OSIS?</div>
+                <div class="faq-answer">OSIS adalah organisasi siswa intra sekolah yang berfungsi sebagai wadah kegiatan siswa di sekolah.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Apa tujuan OSIS?</div>
+                <div class="faq-answer">Tujuan OSIS adalah mengembangkan potensi siswa dalam berbagai aspek seperti kepemimpinan, kreativitas, dan keterampilan sosial.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Bagaimana cara bergabung dengan OSIS?</div>
+                <div class="faq-answer">Untuk bergabung dengan OSIS, siswa dapat mengikuti proses seleksi yang diadakan setiap tahun ajaran baru.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Apa peran OSIS di sekolah?</div>
+                <div class="faq-answer">OSIS berperan dalam merencanakan dan melaksanakan berbagai kegiatan yang bertujuan untuk mengembangkan bakat dan minat siswa.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Apa saja kegiatan yang dilakukan oleh OSIS?</div>
+                <div class="faq-answer">Kegiatan OSIS meliputi acara-acara seperti pentas seni, lomba akademik, olahraga, bakti sosial, dan kegiatan lainnya yang bermanfaat bagi siswa.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Siapa saja yang bisa menjadi pengurus OSIS?</div>
+                <div class="faq-answer">Pengurus OSIS adalah siswa-siswa yang terpilih melalui pemilihan umum yang melibatkan seluruh siswa di sekolah.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Apa manfaat mengikuti OSIS?</div>
+                <div class="faq-answer">Mengikuti OSIS memberikan banyak manfaat seperti pengembangan keterampilan kepemimpinan, organisasi, dan kesempatan untuk berkontribusi bagi sekolah.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Apa saja syarat untuk menjadi pengurus OSIS?</div>
+                <div class="faq-answer">Syarat untuk menjadi pengurus OSIS biasanya mencakup prestasi akademik yang baik, keterampilan kepemimpinan, dan komitmen untuk berkontribusi.</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 OSIS SMK Bina Informatika. All Rights Reserved.</p>
+    </footer>
+    <script>
+        // JavaScript khusus untuk tentang.html
+        document.addEventListener("DOMContentLoaded", function() {
+            const themeToggle = document.getElementById("themeToggle");
+            const body = document.body;
+            const hamburger = document.getElementById("hamburger");
+            const navLinks = document.getElementById("navLinks");
+
+            themeToggle.addEventListener("click", () => {
+                if (body.classList.contains("day-mode")) {
+                    body.classList.remove("day-mode");
+                    body.classList.add("night-mode");
+                    themeToggle.textContent = "☀️";
+                } else {
+                    body.classList.remove("night-mode");
+                    body.classList.add("day-mode");
+                    themeToggle.textContent = "🌙";
+                }
+            });
+
+            hamburger.addEventListener("click", () => {
+                navLinks.classList.toggle("show");
+            });
+
+            document.querySelectorAll(".faq-question").forEach((question) => {
+                question.addEventListener("click", function() {
+                    const answer = this.nextElementSibling;
+                    if (answer.style.display === "block") {
+                        answer.style.display = "none";
+                    } else {
+                        document.querySelectorAll(".faq-answer").forEach((ans) => {
+                            ans.style.display = "none";
+                        });
+                        answer.style.display = "block";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

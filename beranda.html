@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda OSIS SMK Bina Informatika</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="day-mode">
+    <nav class="navbar">
+        <img src="logo-osis.png" alt="Logo OSIS" class="logo">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="beranda.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="anggota.html">Anggota</a></li>
+            <li><a href="sejarah.html">Sejarah</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle">🌙</button>
+        <button class="hamburger" id="hamburger">&#9776;</button>
+    </nav>
+    <main>
+        <section class="photo-gallery">
+            <h2>Foto 2023</h2>
+            <div class="photo-container" id="photos2023">
+                <div class="photo-item" data-date="2023-01-01" data-description="Kegiatan OSIS Januari 2023">
+                    <img src="pp1.jpeg" alt="Foto 2023 1">
+                </div>
+                <div class="photo-item" data-date="2023-02-01" data-description="Kegiatan OSIS Februari 2023">
+                    <img src="pp2.jpeg" alt="Foto 2023 2">
+                </div>
+                <div class="photo-item" data-date="2023-03-01" data-description="Kegiatan OSIS Maret 2023">
+                    <img src="pp3.jpeg" alt="Foto 2023 3">
+                </div>
+                <div class="photo-item" data-date="2023-04-01" data-description="Kegiatan OSIS April 2023">
+                    <img src="pp4.jpeg" alt="Foto 2023 4">
+                </div>
+            </div>
+            <button class="scroll-btn" id="scrollLeft2023">⬅️</button>
+            <button class="scroll-btn" id="scrollRight2023">➡️</button>
+        </section>
+        <section class="photo-gallery">
+            <h2>Foto 2024</h2>
+            <div class="photo-container" id="photos2024">
+                <div class="photo-item" data-date="2024-03-01" data-description="Kegiatan OSIS Maret 2024">
+                    <img src="p1.jpeg" alt="Foto 2024 3">
+                </div>
+                <div class="photo-item" data-date="2024-04-01" data-description="Kegiatan OSIS April 2024">
+                    <img src="p2.jpeg" alt="Foto 2024 4">
+                </div>
+                <div class="photo-item" data-date="2024-05-01" data-description="Kegiatan OSIS Mei 2024">
+                    <img src="p3.jpeg" alt="Foto 2024 5">
+                </div>
+                <div class="photo-item" data-date="2024-06-01" data-description="Kegiatan OSIS Juni 2024">
+                    <img src="p4.jpeg" alt="Foto 2024 6">
+                </div>
+                <div class="photo-item" data-date="2024-05-01" data-description="Kegiatan OSIS Mei 2024">
+                    <img src="p5.jpeg" alt="Foto 2024 5">
+                </div>
+                <div class="photo-item" data-date="2024-06-01" data-description="Kegiatan OSIS Juni 2024">
+                    <img src="p6.jpeg" alt="Foto 2024 6">
+                </div>
+            </div>
+            <button class="scroll-btn" id="scrollLeft2024">⬅️</button>
+            <button class="scroll-btn" id="scrollRight2024">➡️</button>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 OSIS SMK Bina Informatika. All Rights Reserved.</p>
+    </footer>
+    <div id="photoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="Detail Foto">
+            <div id="modalDetails">
+                <p id="modalDate"></p>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

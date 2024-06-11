@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anggota OSIS SMK Bina Informatika</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS khusus untuk anggota.html */
+        .members-container {
+            margin: 70px 10px 20px 10px;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .member-card {
+            background-color: var(--modal-bg);
+            color: var(--text-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .member-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .member-card h3 {
+            margin: 10px 0;
+        }
+
+        .member-card p {
+            margin: 5px 0;
+        }
+
+        .member-card:hover {
+            transform: scale(1.05);
+            background-color: var(--highlight-color);
+        }
+
+        @media (min-width: 768px) {
+            .members-container {
+                justify-content: space-between;
+            }
+
+            .member-card.half-width {
+                width: calc(50% - 40px);
+            }
+
+            .member-card.full-width {
+                width: calc(100% - 40px);
+            }
+        }
+    </style>
+</head>
+<body class="day-mode">
+    <nav class="navbar">
+        <img src="logo-osis.png" alt="Logo OSIS" class="logo">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="beranda.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="anggota.html">Anggota</a></li>
+            <li><a href="sejarah.html">Sejarah</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle">🌙</button>
+        <button class="hamburger" id="hamburger">&#9776;</button>
+    </nav>
+    <main>
+        <section class="members-container">
+            <div class="member-card full-width">
+                <img src="april (3).jpeg" alt="Pembina OSIS">
+                <h3>Pembina OSIS</h3>
+                <p>Riki Eriyanti</p>
+            </div>
+            <div class="member-card half-width">
+                <img src="lusi.jpeg" alt="Ketua OSIS">
+                <h3>Ketua OSIS</h3>
+                <p>Nama Ketua</p>
+            </div>
+            <div class="member-card half-width">
+                <img src="Sei.jpeg" alt="Wakil Ketua OSIS">
+                <h3>Wakil Ketua OSIS</h3>
+                <p>Sei Yin Amita Karyadi</p>
+            </div>
+            <div class="member-card half-width">
+                <img src="creator.jpeg" alt="Sekretaris Utama">
+                <h3>Sekretaris Utama</h3>
+                <p>Muhammad Rafli Albhukhori</p>
+            </div>
+            <div class="member-card half-width">
+                <img src="Div.jpeg" alt="Sekretaris Pembantu">
+                <h3>Sekretaris Pembantu</h3>
+                <p>Diva Citra Ningrum</p>
+            </div>
+            <div class="member-card half-width">
+                <img src="april (1).jpeg" alt="Bendahara Utama">
+                <h3>Bendahara Utama</h3>
+                <p>Aprilia Ardita</p>
+            </div>
+            <div class="member-card half-width">
+                <img src="nadia.jpeg" alt="Bendahara Pembantu">
+                <h3>Bendahara Pembantu</h3>
+                <p>Nadia Fitra Putri Sastrayuga</p>
+            </div>
+            <div class="member-card quarter-width">
+                <img src="ramah.jpeg" alt="Anggota 1">
+                <h3>Koordinator Utama</h3>
+                <p>Ramah Nuriah</p>
+            </div>
+            <div class="member-card quarter-width">
+                <img src="resti.jpeg" alt="Anggota 2">
+                <h3>Koordinator Pembantu</h3>
+                <p>Resti pujiyanti</p>
+            </div>
+            <div class="member-card quarter-width">
+                <img src="Bil.jpeg" alt="Anggota 3">
+                <h3>Seksi Bidang 1</h3>
+                <p>Seliana Bila</p>
+            </div>
+            <div class="member-card quarter-width">
+                <img src="anissa.jpeg" alt="Anggota 3">
+                <h3>Seksi Bidang 2</h3>
+                <p>Annisa Novita</p>
+            </div>
+            <div class="member-card quarter-width">
+                <img src="april (2).jpeg" alt="Anggota 3">
+                <h3>Seksi Bidang 3</h3>
+                <p>Alvina Ramdhani</p>
+            </div>
+            <div class="member-card quarter-width">
+                <img src="tiara.jpeg" alt="Anggota 4">
+                <h3>Seksi Bidang 4</h3>
+                <p>Tiara Puteri Maulida</p>
+            </div>
+            <div class="member-card quarter-width">
+                <img src="maul.jpeg" alt="Anggota 6">
+                <h3>Seksi Bidang 6</h3>
+                <p>Maulana Syahrul</p>
+            </div>
+            <div class="member-card quarter-width">
+                <img src="moda.jpeg" alt="Anggota 7">
+                <h3>Seksi Bidang 8</h3>
+                <p>Mona Azzahra</p>
+            </div>
+            <div class="member-card quarter-width">
+                <img src="ammar.jpeg" alt="Anggota 5">
+                <h3>Seksi Bidang 9</h3>
+                <p>Ammar Abdul Malik</p>
+            </div>
+            <div class="member-card quarter-width">
+                <img src="awal.jpeg" alt="Anggota 8">
+                <h3>Seksi Bidang 10</h3>
+                <p>Siti Syawal Fitriani</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 OSIS SMK Bina Informatika. All Rights Reserved.</p>
+    </footer>
+    <script>
+        // JavaScript khusus untuk anggota.html
+        document.addEventListener("DOMContentLoaded", function() {
+            const themeToggle = document.getElementById("themeToggle");
+            const body = document.body;
+            const hamburger = document.getElementById("hamburger");
+            const navLinks = document.getElementById("navLinks");
+
+            themeToggle.addEventListener("click", () => {
+                if (body.classList.contains("day-mode")) {
+                    body.classList.remove("day-mode");
+                    body.classList.add("night-mode");
+                    themeToggle.textContent = "☀️";
+                } else {
+                    body.classList.remove("night-mode");
+                    body.classList.add("day-mode");
+                    themeToggle.textContent = "🌙";
+                }
+            });
+
+            hamburger.addEventListener("click", () => {
+                navLinks.classList.toggle("show");
+            });
+        });
+    </script>
+</body>
+</html>
